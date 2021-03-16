@@ -1,23 +1,50 @@
 {
-	"name": "cryptol-saw-vscode",
-	"displayName": "Cryptol-SAW-vscode",
-	"description": "A Cryptol/SAW syntax highlighting extension for vscode",
+	"name": "cryptol-vscode-ext",
+	"displayName": "A Cryptol Extension",
+	"description": "A Cryptol syntax highlighting extension for VSCode",
 	"version": "0.0.1",
+	"publisher": "ajayeeralla",
+	"icon": "galois_icon.png",
 	"engines": {
 		"vscode": "^1.54.0"
 	},
 	"categories": [
-		"Other"
+		"Programming Languages"
 	],
 	"activationEvents": [
-		"onCommand:cryptol-saw-vscode.helloWorld"
+		"onLanguage:cryptol",
+		"onCommand:cryptol.activate"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ajayeeralla/cryptol-vscode-ext.git"
+	},
 	"main": "./out/extension.js",
 	"contributes": {
+		"languages": [
+			{
+				"id": "cryptol",
+				"aliases": [
+					"Cryptol",
+					"cryptol"
+				],
+				"extensions": [
+					".cry"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "cryptol",
+				"scopeName": "source.cryptol",
+				"path": "./syntaxes/cryptol.tmLanguage."
+			}
+		],
 		"commands": [
 			{
-				"command": "cryptol-saw-vscode.helloWorld",
-				"title": "Hello World"
+				"command": "cryptol.activate",
+				"title": "Cryptol: Activate cryptol syntax highlighting extension"
 			}
 		]
 	},
