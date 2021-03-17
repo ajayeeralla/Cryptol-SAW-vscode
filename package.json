@@ -1,6 +1,6 @@
 {
 	"name": "cryptol-vscode-ext",
-	"displayName": "A Cryptol Extension",
+	"displayName": "Cryptol Syntax Highlighting",
 	"description": "A Cryptol syntax highlighting extension for VSCode",
 	"version": "0.0.1",
 	"publisher": "ajayeeralla",
@@ -12,7 +12,6 @@
 		"Programming Languages"
 	],
 	"activationEvents": [
-		"onLanguage:cryptol",
 		"onCommand:cryptol.activate"
 	],
 	"repository": {
@@ -38,7 +37,7 @@
 			{
 				"language": "cryptol",
 				"scopeName": "source.cryptol",
-				"path": "./syntaxes/cryptol.tmLanguage."
+				"path": "./syntaxes/cryptol.tmLanguage.json"
 			}
 		],
 		"commands": [
@@ -55,6 +54,7 @@
 		"pretest": "npm run compile && npm run lint",
 		"lint": "eslint src --ext ts",
 		"test": "node ./out/test/runTest.js"
+		
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.54.0",

@@ -31,16 +31,13 @@
 				},
 				{
 					"name": "keyword.other.cryptol",
-					"match" : "\\b(type|module|import)\\b"
+					"match" : "\\b(type|module)\\b"
 				}
 			]
 		},
 		"types":{
 			"patterns": [
-				{
-					"name": "storage.type.cryptol",
-					"match": "\\b(fin)\\b"
-				},
+				
 				{
 					"name": "storage.type.cryptol",
 					"match": "\\b[A-Z][a-zA-Z0-9_]*\\b"
@@ -48,12 +45,7 @@
 			]
 		},
 		"operators" : {
-			"patterns": [
-				{
-					"name": "keyword.operator.cryptol",
-					"match": "(>>$|<$|>$|<=$|>=$|<-|->|>>>|<-|=|==|>|<<<|:|\\.\\.\\.|\\.\\.|\\^|\\^\\^|<|%|&&|\\-|\\+|@|@@|\\#|\\*|\\|\\||\\!|\/)"
-				}
-			]
+			
 		},
 		"literals": {
 			"patterns": [
